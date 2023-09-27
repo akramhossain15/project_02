@@ -1,0 +1,242 @@
+.topbar{
+    background: #9ca3af;
+}
+
+:root{
+    --bg-color: #0aad0a;
+    --text-color: #0aad0a;
+    --transition: 0.5s;
+    --shadow: 0 1rem 3rem rgba(0,0,0,0.175) !important;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+img{
+    width: 100%;
+}
+.text-primary-color{
+    color: var(--text-color);
+}
+.custom-primary-color{
+    background: var(--bg-color) !important;
+    color: #fff;
+}
+.bg-success{
+    background: var(--bg-color) !important;
+}
+.btn-success{
+    background: var(--bg-color) !important;
+
+}
+/* nav css start */
+.navbar .menu-item a {
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    transition: var(--transition);
+    
+}
+.navbar .menu-item a:hover{
+    color: #0aad0a;
+
+}
+.dropdown{
+    background: var(--bg-color);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+.dropdown:hover .dropdown-menu{
+    display: block;
+    left: 0px;
+    top: 57px;   
+    
+}
+/*banner slider css start */
+.slider-content{
+    padding: 80px 0;
+    margin-left: 60px;
+}
+
+.slider-content a:hover{
+    background: transparent;
+    color: black;
+    border: 1px solid black;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: black;
+    background-clip: padding-box;
+    transition: opacity .6s ease;
+}
+/* featured categories css start */
+.catagory-item{
+    border-radius: 10px;
+    border: 0.5px solid green;
+    padding: 30px;
+}
+.catagory-item:hover{
+    border: 3px solid green;
+    box-shadow: var(--shadow);
+}
+/* poster css start  */
+.banner{
+    margin-top: 70px;
+    margin-bottom: 60px;
+}
+.banner-left{
+    padding: 10px 8px;
+    border-radius: 10px;   
+}
+.banner-right{
+    padding: 10px 8px;
+    border-radius: 10px;   
+}
+/* popular products css start */
+.product a:hover{
+    color: #0aad0a;
+}
+.product-card{
+    width: 100%;
+    transition: var(--transition);
+    margin-bottom: 20px;
+}
+.sale{
+    top:15px;
+    left:10px;
+}
+.card-product-action{
+    position: absolute;
+    top: 170px;
+    left: 45px;
+    display: none;
+    transition: var(--transition);
+}
+.card-product-action a{
+    display: inline-block;
+    background: #cbd5e1;
+    padding: 6px 10px;
+    border-radius: 5px;
+    color: black;
+    transition: var(--transition);
+    
+}
+.card-product-action a:hover{
+    background: var(--bg-color) !important;
+    color: white !important;
+    
+}
+
+.product-card:hover{
+    border: 3px solid var(--bg-color);
+    box-shadow: var(--shadow);
+}
+.product-card:hover .card-product-action{
+    display: block;
+}
+.card-body2{
+    padding-bottom: 250px;
+
+}
+.card-image{
+    width: 100%;
+}
+.card-icon{
+    position: absolute;
+    top: 210px;
+    left: 70px;
+    display: none;
+}
+.card-icon a{
+    display: inline-block;
+    background: #cbd5e1;
+    padding: 6px 10px;
+    border-radius: 5px;
+    color: black;
+    transition: var(--transition);
+}
+.card-icon a:hover{
+    background: var(--bg-color);
+    color: white;
+}
+.card{
+    transition: var(--transition);
+}
+.card:hover{
+    border: 1px solid green;
+    box-shadow: var(--shadow);
+}
+.card:hover .card-icon{
+    display: block;
+}
+/* new section start */
+.new-poster{
+    width: 100%;
+    height: 300px;
+}
+.service{
+    padding-top: 40px;
+    padding-bottom: 70px;
+}
+.service-icon{
+    width: 15%;
+}
+.footer{
+    background: #f8fafc;
+    padding-top: 20px;
+    padding-bottom: 120px;
+}
+
+.payment-logo{
+    width: 5%;
+}
+.payment-logo2{
+    width: 20%;
+}
+.payment-logo-title{
+    margin-right: 50px;
+}
+.footer-icon2{
+    font-size: 20px;
+}
+.footer-icon2:hover {
+    color:#0aad0a
+}
+.btns{
+    position: absolute;
+    top: 48px;
+    left: 158px;
+}
+.btns a{
+    display: inline-block;
+    background: #cbd5e1;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+    transition: var(--transition);
+}
+.btns a:hover {
+    background: var(--bg-color);
+}
+/* scrollTop css start */
+.scrollTop {
+    height: 50px;
+    width: 50px;
+    line-height: 50px ;
+    background: #0aad0a;
+    border-radius: 50%;
+    position: fixed;
+    right: 30px;
+    bottom: 50px;
+    text-align: center;
+    display:none;
+}
+.scrollTop a{
+    font-size: 30px;
+    color: white;
+}

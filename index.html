@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freshcart E-commerce</title>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/slicknav.min.css">
+    <!-- Boxicon link-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Bootstrap icon -->
+    <link rel="stylesheet" href="./font/bootstrap-icons.min.css">
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+</head>
+<body>
+
+
+        <!-- topbar start-->
+
+      <div class="topbar py-2 ">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="topbar-left-contant">
+                <p class="fs-6 mb-0">Super Value Deals - Save more with coupons</p>
+              </div>
+
+            </div>
+            <div class="col-lg-6">
+              <div class="language-right-contant ms-auto w-25">
+                <select class="form-select form-select-sm" aria-label="Default select example">
+                  <option selected disabled> Language</option>
+                  <option value="1"> English</option>
+                  <option value="2">Bangla</option>
+                  
+                </select>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--topbar end-->
+      <!-- header start-->
+      <header>
+        <div class="header py-3">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-3">
+                <div class="brand-logo">
+                  <img src="img/freshcart-logo.svg" alt="Freshcart logo">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search for products " aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+              <div class="col-lg-3">
+                <div class="cart-btns d-flex justify-content-end">
+                  <ul class="nav">
+                    <li class="nav-item"><a class="nav-link position-relative" href="#"><i class="bi bi-heart"></i>
+                      <span class="position-absolute top-0  translate-middle badge rounded-pill bg-success">
+                        5+
+                      </span>
+                    </a></li>
+                    <li class="nav-item"><a class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#"><i class="bi bi-person"></i></a></li>
+                    <li class="nav-item"><a class="nav-link position-relative" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" href="#"><i class="bi bi-bag"></i>
+                      <span class="position-absolute top-0 translate-middle badge rounded-pill bg-success">
+                        2
+                      </span>
+                    </a></li>
+                  </ul>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- header end-->
+      <!-- user register moder start-->
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-2" id="exampleModalLabel">Sign Up</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" >
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" >
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="exampleInputEmail1" >
+                  <p>By Signup, you agree to our <a class="text-primary-color text-decoration-none" href="#">Terms of Service</a> & <a class="text-primary-color text-decoration-none" href="#">Privacy Policy</a>
+                  </p>
+                </div>
+                <button type="submit" class="btn btn-success mb-4">Submit</button>
+                <div class="d-flex justify-content-center">
+                  <p>Already have an account? <a class=" text-primary-color text-decoration-none " href="#">Sign in</a></p>
+                </div>
+                
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- user register moder end -->
+    <!-- cart wishlish offcanvas nar start-->
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header">
+        <h3 class="offcanvas-title" id="offcanvasExampleLabel">Shop Cart</h3>
+        
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <div class="row">
+              <hr>
+              <div class="col-lg-4 my-auto">
+              <img src="img/offcanvas image/product-img-1.jpg" alt="">
+              </div>
+              <div class="col-lg-6">
+                <a class="text-decoration-none fw-bold text-secondary" href="#"><p>Haldiram's Sev Bhujia</p></a>
+                <small class="text-muted">0.98 lb</small><br>
+                <a class="text-decoration-none text-success" href="#"><i class="bi bi-trash3-fill"></i>Remove</a>
+              </div>
+              <div class="col-lg-2">
+                <span class="fw-bold my-auto">$5.00</span>
+              </div>
+            </div>
+ 
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col-lg-4 my-auto">
+              <img src="img/offcanvas image/product-img-2.jpg" alt="">
+              </div>
+              <div class="col-lg-6">
+                <a class="text-decoration-none fw-bold text-secondary" href="#"><p>NutriChoice Digestive</p></a>
+                <small class="text-muted">250g</small><br>
+                <a class="text-decoration-none text-success" href="#"><i class="bi bi-trash3-fill"></i>Remove</a>
+              </div>
+              <div class="col-lg-2 ">
+                <span class="fw-bold text-danger">$20.00</span>
+                <span class="fw-bold text-decoration-line-through my-auto">$26.00</span>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col-lg-4 my-auto">
+              <img src="img/offcanvas image/product-img-3.jpg" alt="">
+              </div>
+              <div class="col-lg-6">
+                <a class="text-decoration-none fw-bold text-secondary" href="#"><p>5 Star Chocolate</p></a>
+                <small class="text-muted">1kg</small><br>
+                <a class="text-decoration-none text-success" href="#"><i class="bi bi-trash3-fill"></i>Remove</a>
+              </div>
+              <div class="col-lg-2">
+                <span class="fw-bold my-auto">$15.00</span>
+                <span class="fw-bold text-decoration-line-through my-auto">$20.00</span>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col-lg-4 my-auto">
+              <img src="img/offcanvas image/product-img-4.jpg" alt="">
+              </div>
+              <div class="col-lg-6">
+                <a class="text-decoration-none fw-bold text-secondary" href="#"><p>Onion Flavour Photo</p></a>
+                <small class="text-muted">250g</small><br>
+                <a class="text-decoration-none text-success" href="#"><i class="bi bi-trash3-fill"></i>Remove</a>
+              </div>
+              <div class="col-lg-2">
+                <span class="fw-bold my-auto">$15.00</span>
+                <span class="fw-bold text-decoration-line-through my-auto">$20.00</span>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item my-auto">
+            <div class="row">
+              <div class="col-lg-4">
+              <img src="img/offcanvas image/product-img-5.jpg" alt="">
+              </div>
+              <div class="col-lg-6">
+                <a class="text-decoration-none fw-bold text-secondary" href="#"><p>Salted Instant Popcorn</p></a>
+                <small class="text-muted">100g</small><br>
+                <a class="text-decoration-none text-success" href="#"><i class="bi bi-trash3-fill"></i>Remove</a>
+              </div>
+              <div class="col-lg-2">
+                <span class="fw-bold my-auto">$15.00</span>
+                <span class="fw-bold text-decoration-line-through my-auto">$25.00</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <div class="cart-action-btn d-flex justify-content-between mt-3">
+          <a class="btn btn-success" href="">Continue Shopping</a>
+          <a class="btn btn-dark" href="">Update Cart</a>
+
+        </div>
+        <div>
+          
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- cart wishlish offcanvas nar end-->
+    <!-- main navbar start-->
+
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0 ">
+
+              <li class="nav-item dropdown btn" style="color: white;">
+                <a class="nav-link text-white" href="#" ><i class="bi bi-list "></i>All Departments
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Dairy,Bread & Egg</a></li>
+                  <li><a class="dropdown-item" href="#">Snacks & Munchies</a></li>
+                  <li><a class="dropdown-item" href="#">Fruits & Vegetables</a></li>
+                  <li><a class="dropdown-item" href="#">Cold Drinks & Juices</a></li>
+                  <li><a class="dropdown-item" href="#">Breakfast & Instant Food</a></li>
+                  <li><a class="dropdown-item" href="#">Bakery & Biscuits</a></li>
+                  <li><a class="dropdown-item" href="#">Chicken, Meat & Fish</a></li>
+                  
+                </ul>
+              </li>
+              <li class="nav-items menu-item">
+                <a class="nav-link ms-5 mx-2" href="#">Home <i class="bi bi-caret-down-fill"></i></a>
+              </li>
+              <li class="nav-items menu-item">
+                <a class="nav-link mx-2" href="#">Shop <i class="bi bi-caret-down-fill"></i></a>
+              </li>
+              <li class="nav-items menu-item">
+                <a class="nav-link mx-2" href="#">Stores <i class="bi bi-caret-down-fill"></i></a>
+              </li>
+              <li class="nav-items menu-item">
+                <a class="nav-link mx-2" href="#">Pages <i class="bi bi-caret-down-fill"></i></a>
+              </li>
+              <li class="nav-items menu-item">
+                <a class="nav-link mx-2"  href="#">Account <i class="bi bi-caret-down-fill"></i></a>
+              </li>
+              <li class="nav-items menu-item">
+                <a class="nav-link mx-2"  href="#">Dashboard</a>
+              </li>
+              <li class="nav-item menu-item">
+                <a class="nav-link  mx-2"  href="#">Docs</a>
+              </li>
+              </ul>
+             </div>
+        </div>
+      </nav>
+
+
+      <!-- main navbar end-->
+     <!-- slider start-->
+
+     <div class="container mt-2">
+      <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" style="background: url(img/slide-1.jpg) no-repeat center center; background-size: cover;">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="slider-content">
+                  <span class="bg-warning badge mb-3">Opening Sale Discount 50%</span>
+                  <h2 class="display-5 fw-bold ">SuperMarket For <br> Fresh Grocery </h2>
+                  <p class="lead fs-5 w-50">Introduced a new model for online grocery shopping
+                    and convenient home delivery.</p>
+                    <a class="btn btn-dark"  href="#">Shop Now<i class="bi bi-arrow-right-short"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" style="background: url(img/slider-2.jpg) no-repeat center center; background-size: cover">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="slider-content">
+                  <span class="bg-warning badge mb-3">Opening Sale Discount 50%</span>
+                  <h2 class="display-5 fw-bold ">SuperMarket For <br> Fresh Grocery </h2>
+                  <p class="lead fs-5 w-50">Introduced a new model for online grocery shopping
+                    and convenient home delivery.</p>
+                    <a class="btn btn-dark"  href="#">Shop Now<i class="bi bi-arrow-right-short"></i></a>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        
+      </div>
+     </div>
+
+
+
+
+     <!-- slider end-->
+     <!-- Featured Categories start-->
+     <section>
+        <div class="container">
+          <h1 class="mt-5 mb-4">Featured Categories</h1>
+          <div class="category-list ">
+            <div class="owl-carousel">
+              <div class="catagory-item">
+                <img src="img/category item/category-pet-care.jpg" alt="">
+                <p class="text-center mt-4">Pet care</p>
+              </div>
+              <div class="catagory-item">
+                <img src="img/category item/category-dairy-bread-eggs.jpg" alt="">
+                <p class="text-center mt-4">Dairy, Bread & Egg</p>
+              </div>
+              <div class="catagory-item">
+                <img src="img/category item/category-snack-munchies.jpg" alt="">
+                <p class="text-center mt-4">Snack & Munchies</p>
+              </div>
+              <div class="catagory-item">
+                <img src="img/category item/category-bakery-biscuits.jpg" alt="">
+                <p class="text-center mt-4">Bakery & Biscuits</p>
+              </div>
+              <div class="catagory-item">
+                <img src="img/category item/category-pet-care.jpg" alt="">
+                <p class="text-center mt-4">Pet care</p>
+              </div>
+              <div class="catagory-item">
+                <img src="img/category item/category-instant-food.jpg" alt="">
+                <p class="text-center mt-4">Instant Food</p>
+              </div>
+              <div class="catagory-item">
+                <img src="img/category item/category-tea-coffee-drinks.jpg" alt="">
+                <p class="text-center mt-4">Coffee & Drinks</p>
+              </div>
+              <div class="catagory-item">
+                <img src="img/category item/category-atta-rice-dal.jpg" alt="">
+                <p class="text-center mt-4">Atta, Rice & Dal</p>
+              </div>
+              <div class="catagory-item">
+                <img src="img/category item/category-baby-care.jpg" alt="">
+                <p class="text-center mt-4">Baby Care</p>
+              </div>
+              <div class="catagory-item">
+                <img src="img/category item/category-chicken-meat-fish.jpg" alt="">
+                <p class="text-center mt-4">Chicken & Meat</p>
+              </div>
+              <div class="catagory-item">
+                <img src="img/category item/category-cleaning-essentials.jpg" alt="">
+                <p class="text-center mt-4">Cleaning Essentials</p>
+              </div>
+            </div>
+          </div>
+        </div>
+     </section>
+     <!-- Featured Categories start-->
+
+     <!-- banner start-->
+
+      <section>
+        <div class="banner">
+          <div class="container">
+            <div class="row row-cols-lg-6 rows-md-12">
+              <div class="col-md-6 mb-4">
+                <div class="banner-left" style="background: url(img/banner/grocery-banner.png) no-repeat center center/cover">
+                  <h3 class="mt-2 pt-5">Fruits & Vegetables</h3>
+                  <p>Get Upto <span>30%</span> off </p>
+                  <a class="btn btn-dark mb-4" href="#">Shop Now</a>
+                </div>
+              </div>
+  
+              <div class="col-md-6 ">
+                <div class="banner-right" style="background: url(img/banner/grocery-banner-2.jpg) no-repeat center center/cover">
+                  <h3 class="mt-2 pt-5">Freshly Baked Buns</h3>
+                  <p>Get Upto <span> 25%</span> off </p>
+                  <a class="btn btn-dark mb-4" href="#">Shop Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<!---->
+
+     <!-- banner end-->
+
+     <!-- Popular Product-1 Start-->
+      
+      <section class="py-5">
+        <h1 class="py-4">Popular Products</h1>
+        <div class="container">
+          <div class="row row-cols-lg-5 row-cols-md-3 row-cols-sm-2">
+
+            <div class="col">
+              <div class="card product-card">
+                <div class="product-image position-relative">
+                  <img src="img/product/product-img-1.jpg" class="card-img-top" alt="">
+                  <span class=" sale bg-danger d-inline-block px-2 text-white rounded position-absolute">Sale</span>
+                  
+                  <div class="card-product-action text-center">
+                    <a data-bs-toggle="modal" data-bs-target="#productQuickViewModal" href="#"><i class="bi bi-eye-fill"></i></a>
+                    <a href="#"><i class="bi bi-heart-fill"></i></a>
+                    <a href="#"><i class="bi bi-arrow-left-right"></i></a>
+                  </div>
+
+                  <div class="card-body text-center">
+                    <div class="product-info">
+                      <a class="text-decoration-none text-secondary" href="#">Snack & Munchies</a>
+                      </div>
+                    <h6 class="fs-6">Haldiram's Sev </h6>
+                    <div class="rating m-auto">
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-half text-warning"></i>
+                      <span class="text-muted small">4.5(149)</span>
+                    </div>
+                    <div>
+                      <div class="d-flex justify-content-between pt-3">
+                        <div>
+                          <span class="discount-price fw-bold">$18</span>
+                          <span class="old-price fw-bold text-muted text-decoration-line-through">$24</span>
+                        </div>
+                        <div>
+                          <a class="btn btn-success btn-sm" href="#"><i class="bi bi-plus"></i>Add</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Product quick view modal-->
+              <div class="modal fade" id="productQuickViewModal" tabindex="-1" aria-labelledby="productQuickViewModal" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      
+                      <div class="modal-body">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="product-feature">
+                              <img src="img/products feature/product-single-img-1.jpg" alt="">
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="product-detials">
+                              <small class="text-primary-color mb-2">Bakery & Biscutes</small>
+                              <h3 class="fw-bold mt-4">Napolitanke Ljesnjak</h3>
+                              <div class="rating">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-half text-warning"></i>
+                                <span class="text-primary-color">4.5(40)</span>
+
+                                <div class="mt-3">
+                                  <span class="fw-bold">$32</span>
+                                  <span class="fw-bold text-muted text-decoration-line-through">$35</span>
+                                  <small class="text-danger">26% off</small>
+                                </div>
+                                <hr>
+                                <button type="button" class="btn btn-outline-secondary">250g</button>
+                                <button type="button" class="btn btn-outline-secondary">500g</button>
+                                <button type="button" class="btn btn-outline-secondary">1kg</button>
+                                  <div class="position-relative">
+                                    <a class="btn btn-success btn-lg mt-lg-5" href="#"><i class="bi bi-bag-check-fill"></i>Add to cart</a>
+                                    <div class="btns">
+                                      <a class="" href="#"><i class="bi bi-arrow-left-right"></i></a>
+                                      <a class="" href="#"><i class="bi bi-heart"></i></a>
+                                    </div>
+                                    <hr>
+                                    <div class="d-flex justify-content-between">
+                                      <div class="col-lg-6">
+                                        <p>Product Code:</p>
+                                        <p>Availability:</p>
+                                        <p>Type:</p>
+                                        <p>Shipping:</p>
+                                      </div>
+                                      <div class="col-lg-6">
+                                        <p>FBB00255</p>
+                                        <p>In Stock</p>
+                                        <p>Fruits</p>
+                                        <p>01 day shipping.( Free pickup today)</p>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+                <!--Product quick view end-->
+            </div><!--Product-1 end-->
+          <!-- Products-2 Start-->
+            <div class="col">
+              <div class="card product-card">
+                <div class="product-image position-relative">
+                  <img src="img/product/product-img-2.jpg" class="card-img-top" alt="">
+                  <span class=" sale bg-success d-inline-block px-2 text-white rounded position-absolute">14%</span>
+                  
+                  <div class="card-product-action text-center">
+                    <a data-bs-toggle="modal" data-bs-target="#productQuickViewModal" href="#"><i class="bi bi-eye-fill"></i></a>
+                    <a href="#"><i class="bi bi-heart-fill"></i></a>
+                    <a href="#"><i class="bi bi-arrow-left-right"></i></a>
+                  </div>
+
+                  <div class="card-body text-center">
+                    <div class="product-info mx-3">
+                      <a class="text-decoration-none text-secondary" href="#">Bakery &
+                        Biscuits</a>
+                      </div>
+                    <h3 class="fs-6">NutriChoice </h3>
+                    <div class="rating m-auto">
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-half text-warning"></i>
+                      <span class="text-muted small">4.5(25)</span>
+                    </div>
+                    <div>
+                      <div class="d-flex justify-content-between pt-3">
+                        <div>
+                          <span class="discount-price fw-bold">$24</span>
+                        </div>
+                        <div>
+                          <a class="btn btn-success btn-sm" href="#"><i class="bi bi-plus"></i>Add</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Product quick view modal-->
+              <div class="modal fade" id="productQuickViewModal" tabindex="-1" aria-labelledby="productQuickViewModal" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      
+                      <div class="modal-body">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="product-feature">
+                              <img src="img/products feature/product-single-img-1.jpg" alt="">
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="product-detials">
+                              <h3>Napolitanke Ljesnjak</h3>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+                <!--Product quick view end-->
+            </div><!--Product-2 end-->
+            <!-- Product-3 Start-->
+            <div class="col">
+              <div class="card product-card">
+                <div class="product-image position-relative">
+                  <img src="img/product/product-img-3.jpg" class="card-img-top" alt="">
+                  
+                  <div class="card-product-action text-center">
+                    <a data-bs-toggle="modal" data-bs-target="#productQuickViewModal" href="#"><i class="bi bi-eye-fill"></i></a>
+                    <a href="#"><i class="bi bi-heart-fill"></i></a>
+                    <a href="#"><i class="bi bi-arrow-left-right"></i></a>
+                  </div>
+
+                  <div class="card-body text-center">
+                    <div class="product-info mx-3">
+                      <a class="text-decoration-none text-secondary" href="#">Bakery &
+                        Biscuits</a>
+                      </div>
+                    <h3 class="fs-6">5
+                      Star Chocolate</h3>
+                    <div class="rating m-auto">
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <span class="text-muted small">5(469)</span>
+                    </div>
+                    <div>
+                      <div class="d-flex justify-content-between pt-3">
+                        <div>
+                          <span class="discount-price fw-bold">$32</span>
+                          <span class="old-price fw-bold text-muted text-decoration-line-through">$35</span>
+                        </div>
+                        <div>
+                          <a class="btn btn-success btn-sm" href="#"><i class="bi bi-plus"></i>Add</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Product quick view modal-->
+              <div class="modal fade" id="productQuickViewModal" tabindex="-1" aria-labelledby="productQuickViewModal" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      
+                      <div class="modal-body">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="product-feature">
+                              <img src="img/products feature/product-single-img-1.jpg" alt="">
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="product-detials">
+                              <h3>Napolitanke Ljesnjak</h3>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+                <!--Product quick view end-->
+            </div><!--Product-3 end-->
+            <!-- Product-4 Start-->
+            <div class="col">
+              <div class="card product-card">
+                <div class="product-image position-relative">
+                  <img src="img/product/product-img-4.jpg" class="card-img-top" alt="">
+                  <span class=" sale bg-danger d-inline-block px-2 text-white rounded position-absolute">Hot</span>
+                  
+                  <div class="card-product-action text-center">
+                    <a data-bs-toggle="modal" data-bs-target="#productQuickViewModal" href="#"><i class="bi bi-eye-fill"></i></a>
+                    <a href="#"><i class="bi bi-heart-fill"></i></a>
+                    <a href="#"><i class="bi bi-arrow-left-right"></i></a>
+                  </div>
+
+                  <div class="card-body text-center">
+                    <div class="product-info mx-3">
+                      <a class="text-decoration-none text-secondary" href="#">Snack & Munchies</a>
+                      </div>
+                    <h3 class="fs-6">Onion Potato</h3>
+                    <div class="rating m-auto">
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-half text-warning"></i>
+                      <i class="bi bi-star text-warning"></i>
+                      <span class="text-muted small">3.5(456)</span>
+                    </div>
+                    <div>
+                      <div class="d-flex justify-content-between pt-3">
+                        <div>
+                          <span class="discount-price fw-bold">$3</span>
+                          <span class="old-price fw-bold text-muted text-decoration-line-through">$5</span>
+                        </div>
+                        <div>
+                          <a class="btn btn-success btn-sm" href="#"><i class="bi bi-plus"></i>Add</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Product quick view modal-->
+              <div class="modal fade" id="productQuickViewModal" tabindex="-1" aria-labelledby="productQuickViewModal" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      
+                      <div class="modal-body">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="product-feature">
+                              <img src="img/products feature/product-single-img-1.jpg" alt="">
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="product-detials">
+                              <h3>Napolitanke Ljesnjak</h3>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+                <!--Product quick view end-->
+            </div><!--Product-4 end-->
+            <!-- Product-5 Start-->
+            <div class="col">
+              <div class="card product-card">
+                <div class="product-image position-relative">
+                  <img src="img/product/product-img-5.jpg" class="card-img-top" alt="">
+                  
+                  <div class="card-product-action text-center">
+                    <a data-bs-toggle="modal" data-bs-target="#productQuickViewModal" href="#"><i class="bi bi-eye-fill"></i></a>
+                    <a href="#"><i class="bi bi-heart-fill"></i></a>
+                    <a href="#"><i class="bi bi-arrow-left-right"></i></a>
+                  </div>
+
+                  <div class="card-body text-center">
+                    <div class="product-info mx-3">
+                      <a class="text-decoration-none text-secondary" href="#">Instant
+                        Food</a>
+                      </div>
+                    <h3 class="fs-6">Salted Popcorn </h3>
+                    <div class="rating m-auto">
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-half text-warning"></i>
+                      <span class="text-muted small">4.5(39)</span>
+                    </div>
+                    <div>
+                      <div class="d-flex justify-content-between pt-3">
+                        <div>
+                          <span class="discount-price fw-bold">$13</span>
+                          <span class="old-price fw-bold text-muted text-decoration-line-through">$18</span>
+                        </div>
+                        <div>
+                          <a class="btn btn-success btn-sm" href="#"><i class="bi bi-plus"></i>Add</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Product quick view modal-->
+              <div class="modal fade" id="productQuickViewModal" tabindex="-1" aria-labelledby="productQuickViewModal" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      
+                      <div class="modal-body">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="product-feature">
+                              <img src="img/products feature/product-single-img-1.jpg" alt="">
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="product-detials">
+                              <h3>Napolitanke Ljesnjak</h3>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+                <!--Product quick view end-->
+            </div><!--Product-5 end-->
+            <!-- Product-6 Start-->
+            <div class="col">
+              <div class="card product-card">
+                <div class="product-image position-relative">
+                  <img src="img/product/product-img-6.jpg" class="card-img-top" alt="">
+                  <span class=" sale bg-danger d-inline-block px-2 text-white rounded position-absolute">Sale</span>
+                  
+                  <div class="card-product-action text-center">
+                    <a data-bs-toggle="modal" data-bs-target="#productQuickViewModal" href="#"><i class="bi bi-eye-fill"></i></a>
+                    <a href="#"><i class="bi bi-heart-fill"></i></a>
+                    <a href="#"><i class="bi bi-arrow-left-right"></i></a>
+                  </div>
+
+                  <div class="card-body text-center">
+                    <div class="product-info mx-3">
+                      <a class="text-decoration-none text-secondary" href="#">Ice cream</a>
+                      </div>
+                    <h3 class="fs-6">Ice Cafe</h3>
+                    <div class="rating m-auto">
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-half text-warning"></i>
+                      <span class="text-muted small">4.5(189)</span>
+                    </div>
+                    <div>
+                      <div class="d-flex justify-content-between pt-3">
+                        <div>
+                          <span class="discount-price fw-bold">$18</span>
+                          <span class="old-price fw-bold text-muted text-decoration-line-through">$24</span>
+                        </div>
+                        <div>
+                          <a class="btn btn-success btn-sm" href="#"><i class="bi bi-plus"></i>Add</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Product quick view modal-->
+              <div class="modal fade" id="productQuickViewModal" tabindex="-1" aria-labelledby="productQuickViewModal" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      
+                      <div class="modal-body">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="product-feature">
+                              <img src="img/products feature/product-single-img-1.jpg" alt="">
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="product-detials">
+                              <h3>Napolitanke Ljesnjak</h3>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+                <!--Product quick view end-->
+            </div><!--Product-6 end-->
+            <!-- Product-7 Start-->
+            <div class="col">
+              <div class="card product-card">
+                <div class="product-image position-relative">
+                  <img src="img/product/product-img-7.jpg" class="card-img-top" alt="">
+                  
+                  <div class="card-product-action text-center">
+                    <a data-bs-toggle="modal" data-bs-target="#productQuickViewModal" href="#"><i class="bi bi-eye-fill"></i></a>
+                    <a href="#"><i class="bi bi-heart-fill"></i></a>
+                    <a href="#"><i class="bi bi-arrow-left-right"></i></a>
+                  </div>
+
+                  <div class="card-body text-center">
+                    <div class="product-info mx-3">
+                      <a class="text-decoration-none text-secondary" href="#">Bread & Eggs </a>
+                      </div>
+                    <h3 class="fs-6">Britannia Cheese</h3>
+                    <div class="rating m-auto">
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <span class="text-muted small">5(345)</span>
+                    </div>
+                    <div>
+                      <div class="d-flex justify-content-between pt-3">
+                        <div>
+                          <span class="discount-price fw-bold">$24</span>
+                        </div>
+                        <div>
+                          <a class="btn btn-success btn-sm" href="#"><i class="bi bi-plus"></i>Add</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Product quick view modal-->
+              <div class="modal fade" id="productQuickViewModal" tabindex="-1" aria-labelledby="productQuickViewModal" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      
+                      <div class="modal-body">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="product-feature">
+                              <img src="img/products feature/product-single-img-1.jpg" alt="">
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="product-detials">
+                              <h3>Napolitanke Ljesnjak</h3>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+                <!--Product quick view end-->
+            </div><!--Product-7 end-->
+            <!-- Product-8 Start-->
+            <div class="col">
+              <div class="card product-card">
+                <div class="product-image position-relative">
+                  <img src="img/product/product-img-8.jpg" class="card-img-top" alt="">
+                  
+                  <div class="card-product-action text-center">
+                    <a data-bs-toggle="modal" data-bs-target="#productQuickViewModal" href="#"><i class="bi bi-eye-fill"></i></a>
+                    <a href="#"><i class="bi bi-heart-fill"></i></a>
+                    <a href="#"><i class="bi bi-arrow-left-right"></i></a>
+                  </div>
+
+                  <div class="card-body text-center">
+                    <div class="product-info mx-3">
+                      <a class="text-decoration-none text-secondary" href="#">Instant
+                        Food</a>
+                      </div>
+                    <h3 class="fs-6">Kellogg's Cereals</h3>
+                    <div class="rating m-auto">
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star text-warning"></i>
+                      <span class="text-muted small">4(90)</span>
+                    </div>
+                    <div>
+                      <div class="d-flex justify-content-between pt-3">
+                        <div>
+                          <span class="discount-price fw-bold">$32</span>
+                          <span class="old-price fw-bold text-muted text-decoration-line-through">$35</span>
+                        </div>
+                        <div>
+                          <a class="btn btn-success btn-sm" href="#"><i class="bi bi-plus"></i>Add</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Product quick view modal-->
+              <div class="modal fade" id="productQuickViewModal" tabindex="-1" aria-labelledby="productQuickViewModal" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      
+                      <div class="modal-body">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="product-feature">
+                              <img src="img/products feature/product-single-img-1.jpg" alt="">
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="product-detials">
+                              <h3>Napolitanke Ljesnjak</h3>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+                <!--Product quick view end-->
+            </div><!--Product-8 end-->
+            <!-- Product-9 Start-->
+
+            <div class="col">
+              <div class="card product-card">
+                <div class="product-image position-relative">
+                  <img src="img/product/product-img-9.jpg" class="card-img-top" alt="">                  
+                  <div class="card-product-action text-center">
+                    <a data-bs-toggle="modal" data-bs-target="#productQuickViewModal" href="#"><i class="bi bi-eye-fill"></i></a>
+                    <a href="#"><i class="bi bi-heart-fill"></i></a>
+                    <a href="#"><i class="bi bi-arrow-left-right"></i></a>
+                  </div>
+
+                  <div class="card-body text-center">
+                    <div class="product-info mx-3">
+                      <a class="text-decoration-none text-secondary" href="#">Snack & Munchies</a>
+                      </div>
+                    <h3 class="fs-6">Millet Chocolate</h3>
+                    <div class="rating m-auto">
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-half text-warning"></i>
+                      <span class="text-muted small">4.5(67)</span>
+                    </div>
+                    <div>
+                      <div class="d-flex justify-content-between pt-3">
+                        <div>
+                          <span class="discount-price fw-bold">$3</span>
+                          <span class="old-price fw-bold text-muted text-decoration-line-through">$5</span>
+                        </div>
+                        <div>
+                          <a class="btn btn-success btn-sm" href="#"><i class="bi bi-plus"></i>Add</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Product quick view modal-->
+              <div class="modal fade" id="productQuickViewModal" tabindex="-1" aria-labelledby="productQuickViewModal" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      
+                      <div class="modal-body">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="product-feature">
+                              <img src="img/products feature/product-single-img-1.jpg" alt="">
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="product-detials">
+                              <h3>Napolitanke Ljesnjak</h3>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+                <!--Product quick view end-->
+            </div><!--Product-9 end-->
+            <!--Product-10 Start-->
+            <div class="col">
+              <div class="card product-card">
+                <div class="product-image position-relative">
+                  <img src="img/product/product-img-10.jpg" class="card-img-top" alt="">                  
+                  <div class="card-product-action text-center">
+                    <a data-bs-toggle="modal" data-bs-target="#productQuickViewModal" href="#"><i class="bi bi-eye-fill"></i></a>
+                    <a href="#"><i class="bi bi-heart-fill"></i></a>
+                    <a href="#"><i class="bi bi-arrow-left-right"></i></a>
+                  </div>
+
+                  <div class="card-body text-center">
+                    <div class="product-info mx-3">
+                      <a class="text-decoration-none text-secondary" href="#">Bread & Eggs</a>
+                      </div>
+                    <h3 class="fs-6">Amul Butter</h3>
+                    <div class="rating m-auto">
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-fill text-warning"></i>
+                      <i class="bi bi-star-half text-warning"></i>
+                      <i class="bi bi-star text-warning"></i>
+                      <span class="text-muted small">3.5(90)</span>
+                    </div>
+                    <div>
+                      <div class="d-flex justify-content-between pt-3">
+                        <div>
+                          <span class="discount-price fw-bold">$13</span>
+                          <span class="old-price fw-bold text-muted text-decoration-line-through">$18</span>
+                        </div>
+                        <div>
+                          <a class="btn btn-success btn-sm" href="#"><i class="bi bi-plus"></i>Add</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Product quick view modal-->
+              <div class="modal fade" id="productQuickViewModal" tabindex="-1" aria-labelledby="productQuickViewModal" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      
+                      <div class="modal-body">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="product-feature">
+                              <img src="img/products feature/product-single-img-1.jpg" alt="">
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="product-detials">
+                              <h3>Napolitanke Ljesnjak</h3>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+                <!--Product quick view end-->
+            </div><!--Product-10 end-->
+          </div>
+        </div>
+      </section>
+     <!-- Popular Products end-->
+
+     <!--================= new section============ -->
+
+      <section class=" py-5">
+        <div class="fw-bold mb-5"><h1> Best Sells</h1></div>
+        <div class="container">
+          <div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-1">
+
+            <!-- Daily best sells product-1 Strat -->
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+             
+              <div class="card" style="background: url(img/banner/banner-deal.jpg) no-repeat center center/cover; width: 100%; height: 480px;">
+                <div class="card-body2 text-white mt-5 ms-4">
+                  <h2 class="fw-bold ">100% Organic <br> Coffee Beans.</h2>
+                <h5>Get the best deal before <br> close.</h5>
+                <a class="btn btn-success btn-lg mt-3" href="#">Shop Now<i class="bi bi-arrow-right-short"></i></a>
+                </div>
+                
+              </div>
+            </div>
+            <!-- Daily best sells product-1 end -->
+            <!-- Daily best sells product-2 Strat -->
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="card text-center mb-4" style="width: 100%; height: 480px;">
+                <div class="card-image position-relative ">
+                  <img src="img/banner/banner-deal-2.jpg" class="card-img-top" alt="">
+                  <div class="card-icon">
+                    <a data-bs-toggle="modal" data-bs-target="#productQuickViewModal" href="#"><i class="bi bi-eye-fill"></i></a></a>
+                    <a href="#"><i class="bi bi-heart-fill"></i></a>
+                    <a href="#"><i class="bi bi-arrow-left-right"></i></a>
+                  </div>
+                </div>
+                <div class="card-body p-0">
+                  <p class="text-muted fw-bold fs-6">Tea & Coffee </p>
+                  <a class="text-decoration-none fs-5 fw-bold" href="#">Roast Coffee</a>
+                </div>
+                <div class="d-flex justify-content-between ms-4 me-4">
+                  <div>
+                    <span class="discount-price fw-bold fs-4">$13</span>
+                    <span class="old-price text-decoration-line-through text-secondary">$18</span>
+                  </div>
+                  <div class="rating">
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-half text-warning"></i>
+                    <span class="text-muted ">4.5</span>
+                  </div>
+                </div>
+                <div>
+                  <a class="btn btn-success btn-lg px-lg-5 my-3"  href="#"><i class="bi bi-plus-lg"></i>Add to cart</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Daily best sells product-2 end -->
+            <!-- Daily best sells product-3 Strat -->
+            
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="card text-center mb-4" style="width: 100%; height: 480px;">
+                <div class="card-image position-relative ">
+                  <img src="img/banner/banner-deal-3.jpg" class="card-img-top" alt="">
+                  <div class="card-icon">
+                    <a data-bs-toggle="modal" data-bs-target="#productQuickViewModal" href="#"><i class="bi bi-eye-fill"></i></a></a>
+                    <a href="#"><i class="bi bi-heart-fill"></i></a>
+                    <a href="#"><i class="bi bi-arrow-left-right"></i></a>
+                  </div>
+                </div>
+                <div class="card-body p-0">
+                  <p class="text-muted fw-bold fs-6">Fruits & Vegetables</p>
+                  <a class="text-decoration-none fs-5 fw-bold" href="#">Tomatoes</a>
+                </div>
+                <div class="d-flex justify-content-between ms-4 me-4">
+                  <div>
+                    <span class="discount-price fw-bold fs-4">$13</span>
+                    <span class="old-price text-decoration-line-through text-secondary">$18</span>
+                  </div>
+                  <div class="rating">
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-half text-warning"></i>
+                    <span class="text-muted ">4.5</span>
+                  </div>
+                </div>
+                <div>
+                  <a class="btn btn-success btn-lg px-lg-5 my-3"  href="#"><i class="bi bi-plus-lg"></i>Add to cart</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Daily best sells product-3 end -->
+            <!-- Daily best sells product-4 Strat -->
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+              <div class="card text-center mb-4" style="width: 100%; height: 480px;">
+                <div class="card-image position-relative ">
+                  <img src="img/banner/banner-deal-4.jpg" class="card-img-top" alt="">
+                  <div class="card-icon">
+                    <a data-bs-toggle="modal" data-bs-target="#productQuickViewModal" href="#"><i class="bi bi-eye-fill"></i></a></a>
+                    <a href="#"><i class="bi bi-heart-fill"></i></a>
+                    <a href="#"><i class="bi bi-arrow-left-right"></i></a>
+                  </div>
+                </div>
+                <div class="card-body p-0">
+                  <p class="text-muted fw-bold fs-6"> Bread & Eggs</p>
+                  <a class="text-decoration-none fs-5 fw-bold" href="#">Golden Pineapple</a>
+                </div>
+                <div class="d-flex justify-content-between ms-4 me-4">
+                  <div>
+                    <span class="discount-price fw-bold fs-4">$13</span>
+                    <span class="old-price text-decoration-line-through text-secondary">$18</span>
+                  </div>
+                  <div class="rating">
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-fill text-warning"></i>
+                    <i class="bi bi-star-half text-warning"></i>
+                    <span class="text-muted ">4.5</span>
+                  </div>
+                </div>
+                <div>
+                  <a class="btn btn-success btn-lg px-lg-5 my-3"  href="#"><i class="bi bi-plus-lg"></i>Add to cart</a>
+                </div>
+              </div>
+            </div>
+          </div>
+            <!-- Daily best sells product-4 end -->
+
+            <!-- Service Section Start -->
+
+          <section class="my-5">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                  <div class="service">
+                    <div class="service-icon py-3">
+                      <img src="img/icon/clock.svg"alt="">
+                    </div>
+                    <h4>10 minute grocery now</h4>
+                    <h6 class="text-muted ">Get your order delivered to your doorstep at the earliest from FreshCart pickup stores near you.</h6>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                  <div class="service">
+                    <div class="service-icon py-3">
+                      <img src="img/icon/gift.svg"alt="">
+                    </div>
+                    <h4>Best Prices & Offers</h4>
+                    <h6 class="text-muted ">Cheaper prices than your local supermarket, great cashback offers to top it off. Get best pricess & offers.</h6>
+                  </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                  <div class="service">
+                    <div class="service-icon py-3">
+                      <img src="img/icon/package.svg"alt="">
+                    </div>
+                    <h4>Wide Assortment</h4>
+                    <h6 class="text-muted ">Choose from 5000+ products across food, personal care, household, bakery, veg and non-veg & other categories.</h6>
+                  </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                  <div class="service">
+                    <div class="service-icon py-3">
+                      <img src="img/icon/refresh-cw.svg"alt="">
+                    </div>
+                    <h4>Easy Returns</h4>
+                    <h6 class="text-muted ">Not satisfied with a product? Return it at the doorstep & get a refund within hours. No questions asked policy.</h6>
+                  </div>
+                </div>
+
+                </div>
+              </div> 
+             </div>
+              
+            </div>
+            </div>
+           </section>
+
+          <!-- Service Section end -->
+
+
+
+        <!-- footer Section strat -->
+
+<section class="footer">
+            <div class="container">
+              <div class="row pt-lg-5">
+                <div class="col-lg-2 ">
+                  <h6 class="fw-bold">Categories</h6>
+                    <a class="text-decoration-none d-flex text-secondary" href="">vagetable and fruits</a>
+                    <a class="text-decoration-none d-flex text-secondary" href="">Breakfast & instant food</a>
+                    <a class="text-decoration-none d-flex text-secondary" href="">Bakery & Biscute</a>
+                    <a class="text-decoration-none d-flex text-secondary" href="">Atta, rice & dal</a>
+                    <a class="text-decoration-none d-flex text-secondary" href="">Sauces & spreads</a>
+                    <a class="text-decoration-none d-flex text-secondary" href="">Organic & gourmet</a>
+                    <a class="text-decoration-none d-flex text-secondary" href="">Baby care</a>
+                    <a class="text-decoration-none d-flex text-secondary" href="">Cleaning cssentials</a>
+                    <a class="text-decoration-none d-flex text-secondary" href="">Personal care</a>
+                </div>
+                <div class="col-lg-2">
+                  <br>
+                  <a class="text-decoration-none d-flex text-secondary" href="">Dairy,bread & eggs</a>
+                    <a class="text-decoration-none d-flex text-secondary" href="">Cold drinks & juices</a>
+                    <a class="text-decoration-none d-flex text-secondary" href="">Tea, coffee & drinks</a>
+                    <a class="text-decoration-none d-flex text-secondary" href="">Masala, oil & more</a>
+                    <a class="text-decoration-none d-flex text-secondary" href="">Chicken, meat & fish</a>
+                    <a class="text-decoration-none d-flex text-secondary" href="">Paan corner</a>
+                    <a class="text-decoration-none d-flex text-secondary" href="">Pharma & wellness</a>
+                    <a class="text-decoration-none d-flex text-secondary" href="">Home & office</a>
+                    <a class="text-decoration-none d-flex text-secondary" href="">Pet care</a>
+                </div>
+                <div class="col-lg-2">
+                  <h6 class="fw-bold">Get to Know us</h6><br>
+                    <a class="text-decoration-none d-flex text-secondary" href="">Company</a>
+                    <a class="text-decoration-none d-flex text-secondary" href="">About</a>
+                    <a class="text-decoration-none d-flex text-secondary" href="">Blog</a>
+                    <a class="text-decoration-none d-flex text-secondary" href="">Help Center</a>
+                    <a class="text-decoration-none d-flex text-secondary" href="">Our Value</a>
+                </div>
+                <div class="col-lg-2">
+                  <h6 class="fw-bold">For Consumers</h6><br>
+                    <a class="text-decoration-none d-flex text-secondary" href="">Payments</a>
+                    <a class="text-decoration-none d-flex text-secondary" href="">Shipping</a>
+                    <a class="text-decoration-none d-flex text-secondary" href="">Product Returns</a>
+                    <a class="text-decoration-none d-flex text-secondary" href="">FAQ</a>
+                    <a class="text-decoration-none d-flex text-secondary" href="">Shop Checkout</a>
+                </div>
+                <div class="col-lg-2">
+                  <h6 class="fw-bold">Become a Shopper</h6><br>
+                    <a class="text-decoration-none d-flex text-secondary" href="">Shopper Opportunities</a>
+                    <a class="text-decoration-none d-flex text-secondary" href="">Become a Shopper</a>
+                    <a class="text-decoration-none d-flex text-secondary" href="">Earnings</a>
+                    <a class="text-decoration-none d-flex text-secondary" href="">Ideas & Guides</a>
+                    <a class="text-decoration-none d-flex text-secondary" href="">New Retailers</a>
+                </div>
+                <div class="col-lg-2">
+                  <h6 class="fw-bold">Freshcart programs</h6><br>
+                    <a class="text-decoration-none d-flex text-secondary" href="">Freshcart programs</a>
+                    <a class="text-decoration-none d-flex text-secondary" href="">Gift Cards</a>
+                    <a class="text-decoration-none d-flex text-secondary" href="">Promos</a>
+                    <a class="text-decoration-none d-flex text-secondary" href="">Freshcart Ads</a>
+                    <a class="text-decoration-none d-flex text-secondary" href="">Careers</a>
+                </div>
+                <br>
+                <br>
+                <hr>
+
+            <div class="col-lg-6">
+              <span class="payment">Payment Partners</span><img class="payment-logo ms-2" src="img/icon/amazonpay.svg" alt="">
+              <img class="payment-logo" src="img/icon/amazonpay.svg" alt="">
+              <img class="payment-logo" src="img/icon/american-express.svg" alt="">
+              <img class="payment-logo" src="img/icon/mastercard.svg" alt="">
+              <img class="payment-logo" src="img/icon/paypal.svg" alt="">
+              <img class="payment-logo" src="img/icon/visa.svg" alt="">
+              
+            </div>
+            <div class="col-lg-6 d-flex justify-content-end">
+              <span class="payment-logo-title">Get deliveries with FreshCart</span><img class="payment-logo2 me-2 mb-3" src="img/icon/appstore-btn.svg" alt=""><img class="payment-logo2 mb-3" src="img/icon/googleplay-btn.svg" alt="">
+            </div>
+
+            <hr>
+            <div class="d-flex justify-content-between">
+              <div>
+                <small class="text-secondary">© 2022 - 2023 FreshCart eCommerce HTML Template. All rights reserved. Powered by <a class="text-decoration-none text-primary-color" href="#">Codescandy</a>.
+                </small>
+              </div>
+              <div >
+                
+                  <span class="small">Follw us on</span>
+                  <span><i class="bi bi-facebook footer-icon2"></i></span>
+                  <span><i class="bi bi-twitter footer-icon2"></i></span>
+                  <span><i class="bi bi-instagram footer-icon2"></i></span>
+              </div>
+            </div>
+              </div>
+            </div>
+
+            
+</section>
+           
+
+           
+</div>   
+           
+
+
+
+<!-- footer Section end -->
+
+<!-- scrollTop start-->
+<div class="scrollTop">
+  <a href="#"><i class="bi bi-arrow-up-circle-fill"></i></a>
+ </div>
+<!-- scrollTop end-->
+
+
+
+
+    <!-- Bootstrap js -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <!--  owl carousel js  -->
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <!-- AOS animation js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- main js -->
+    <script src="js/main.js"></script>
+
+    <script>
+    
+    </script>
+    
+</body>
+</html>
